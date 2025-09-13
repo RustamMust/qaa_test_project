@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 @DisplayName("class StringProcessor, method reverse.")
-public class ReverseStringTest {
+public class ReverseStringTest extends StringProcessorTest{
     /**
      * Тесты для переворота строки
      * happy path: "sasha" -> "ahsas"
@@ -35,8 +35,6 @@ public class ReverseStringTest {
     @ParameterizedTest
     @MethodSource("validStringsToReverse")
     public void userCanReverseValidString(String initialString, String expectedString) {
-        StringProcessor stringProcessor = new StringProcessor();
-
         String reversedString = stringProcessor.reverse(initialString);
 
         assertEquals(expectedString, reversedString, "String was reversed incorrectly");
@@ -44,8 +42,6 @@ public class ReverseStringTest {
 
     @Test
     public void userCannotReverseNullString() {
-        StringProcessor stringProcessor = new StringProcessor();
-
         assertThrows(IllegalArgumentException.class, () -> {
             stringProcessor.reverse(null);
         }, "Reversing of null string should lead to IllegalArgumentException."
