@@ -1,9 +1,7 @@
 package practice_11.homework.task_11;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
