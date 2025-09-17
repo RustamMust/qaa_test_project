@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class EntityManagerTest {
     /**
      * ТЕСТ КЕЙСЫ
-     *
      * Добавление элементов:
      *      добавить 1 элемент в пустой менеджер, было 0 элементов стало 1 элемент
      *      добавить 1 элемент в непустой менеджер, было 2 элемента стало 3 элемента
